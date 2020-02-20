@@ -55,7 +55,7 @@ public class Newssystem {
         if(receivers.containsKey(news.getCategory())) {
             allNews.add(news);
         }else {
-            System.out.println("Keine gültige Kategorie");
+            System.out.println("Keine gültige Kategorie!");
         }
     }
 
