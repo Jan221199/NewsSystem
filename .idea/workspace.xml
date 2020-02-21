@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9d99c72-aa9e-4e37-9188-4da3457d626b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/BehavorialPattern/Observer/Newssystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BehavorialPattern/Observer/Newssystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BehavorialPattern/Observer/WebSocketClientDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BehavorialPattern/Observer/WebSocketClientDemo.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +137,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

@@ -10,6 +10,6 @@ public class WebSocketClientDemo {
         ChatClient chatClient = new ChatClient(new URI(host));
         chatClient.connect();
         Thread.sleep(1000);
-        chatClient.send("Die Chiefs haben den SuperBowl gewonnen|Sport");
+        chatClient.send("Die Kansas City Chiefs haben den SuperBowl gewonnen!|Sport");
     }
 }
