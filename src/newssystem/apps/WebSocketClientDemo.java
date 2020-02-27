@@ -1,4 +1,6 @@
-package BehavorialPattern.Observer;
+package newssystem.apps;
+
+import newssystem.websocket.ChatClient;
 
 import java.net.URI;
 import java.net.URISyntaxException;

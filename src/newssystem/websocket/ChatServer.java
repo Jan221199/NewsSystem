@@ -1,8 +1,9 @@
-package BehavorialPattern.Observer;
+package newssystem.websocket;
 
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 
+import newssystem.adapter.AddNewsAdapter;
 import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
 import org.java_websocket.server.WebSocketServer;

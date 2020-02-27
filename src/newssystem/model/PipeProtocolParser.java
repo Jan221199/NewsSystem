@@ -1,4 +1,4 @@
-package BehavorialPattern.Observer;
+package newssystem.model;
 
 public class PipeProtocolParser implements ParsingInterface {
     @Override

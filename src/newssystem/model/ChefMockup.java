@@ -1,6 +1,4 @@
-package BehavorialPattern.Observer;
-
-import java.util.ArrayList;
+package newssystem.model;
 
 public class ChefMockup implements Runnable {
 

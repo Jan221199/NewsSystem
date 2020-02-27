@@ -1,4 +1,4 @@
-package BehavorialPattern.Observer;
+package newssystem.model;
 
 import java.util.ArrayList;
 import java.util.HashMap;

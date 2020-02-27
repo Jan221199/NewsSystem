@@ -1,9 +1,8 @@
-package BehavorialPattern.Observer;
+package newssystem.model;
 
 import utilities.Console;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class Chef {

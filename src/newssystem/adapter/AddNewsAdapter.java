@@ -1,4 +1,7 @@
-package BehavorialPattern.Observer;
+package newssystem.adapter;
+
+import newssystem.port.AddNewsPort;
+import newssystem.model.ParsingInterface;
 
 public class AddNewsAdapter {
 
