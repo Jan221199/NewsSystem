@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9d99c72-aa9e-4e37-9188-4da3457d626b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/BehavorialPattern/Observer/WebSocketClientDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BehavorialPattern/Observer/WebSocketClientDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BehavorialPattern/Observer/ChefMockup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pattern/BehavorialPattern/Observer/AddNewsAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pattern/BehavorialPattern/Observer/AddNewsAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pattern/BehavorialPattern/Observer/Newssystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pattern/BehavorialPattern/Observer/Newssystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pattern/BehavorialPattern/Observer/WebSocketClientDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pattern/BehavorialPattern/Observer/WebSocketClientDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pattern/BehavorialPattern/Observer/WebSocketServerDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pattern/BehavorialPattern/Observer/WebSocketServerDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BehavorialPattern/Observer/Chef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BehavorialPattern/Observer/Chef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BehavorialPattern/Observer/Newssystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BehavorialPattern/Observer/Newssystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BehavorialPattern/Observer/WebSocketServerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BehavorialPattern/Observer/WebSocketServerDemo.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -43,7 +51,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.WebSocketClientDemo">
+  <component name="RunManager" selected="Application.WebSocketServerDemo">
     <configuration name="ChatClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BehavorialPattern.Observer.ChatClient" />
       <module name="Pattern" />
@@ -111,8 +119,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.WebSocketClientDemo" />
         <item itemvalue="Application.WebSocketServerDemo" />
+        <item itemvalue="Application.WebSocketClientDemo" />
         <item itemvalue="Application.ChatClient" />
         <item itemvalue="Application.ChatServer" />
         <item itemvalue="Application.ObserverDemo" />

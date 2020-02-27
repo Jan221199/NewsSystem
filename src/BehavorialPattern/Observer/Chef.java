@@ -4,10 +4,11 @@ import utilities.Console;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class Chef {
-    private ArrayList<News> allNews;
-    private Newssystem newsSystem;
+    protected ArrayList<News> allNews;
+    protected Newssystem newsSystem;
 
     public Chef(Newssystem newsSystem){
         this.allNews = new ArrayList<>();
@@ -38,17 +39,15 @@ public class Chef {
         newsSystem.listAllNews(); //zuerst alle ausstehenden News ausgeben
         int newsCounter = Console.readInt("Geben Sie Numerrierung der Nachricht an, die Sie veröffentlichen wollen");
 
-        ArrayList<News> allNews = newsSystem.getAllNews();
+        List<News> allNews = newsSystem.getAllNews();
 
         newsSystem.sendNews(allNews.get(newsCounter - 1));
-        newsSystem.removeNews(allNews.get(newsCounter - 1));
     }
 
     public void deleteNews(){
         newsSystem.listAllNews(); //zuerst alle ausstehenden News ausgeben
         int newsCounter = Console.readInt("Geben Sie Numerrierung der Nachricht an, die Sie löschen wollen");
 
-        ArrayList<News> allNews = newsSystem.getAllNews();
-        newsSystem.removeNews(allNews.get(newsCounter - 1));
+        List<News> allNews = newsSystem.getAllNews();
     }
 }

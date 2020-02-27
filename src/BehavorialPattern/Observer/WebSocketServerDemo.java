@@ -37,14 +37,17 @@ public class WebSocketServerDemo {
         addNewsPort.newNews(new News("Nachricht: Der FC ... hat gewonnen", "Sport"));
         addNewsPort.newNews(new News("Nachricht: XYZ ist neuer Bundeskanzler", "Politik"));
 
-        Chef chef = new Chef(newsSystem);
-        chef.manageNews();
+//        Chef chef = new Chef(newsSystem);
+//        chef.manageNews();
+        ChefMockup chefMockup = new ChefMockup(newsSystem);
+        Thread thread = new Thread(chefMockup);
+        thread.start();
 
         registerPort.unregister(receiverB, "Sport");
         addNewsPort.newNews(new News("Nachricht: Der FC ... hat gewonnen", "Sport"));
         addNewsPort.newNews(new News("Nachricht: XYZ ist neuer Bundeskanzler", "Politik"));
 
-        chef.manageNews();
+//        chef.manageNews();
 
 
     }
