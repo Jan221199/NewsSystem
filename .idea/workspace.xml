@@ -2,27 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9d99c72-aa9e-4e37-9188-4da3457d626b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/newssystem/model/ParsingInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/newssystem/model/Receiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/newssystem/port/AddNewsPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BehavorialPattern/Observer/AbstractionLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newssystem/layer/AbstractionLayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BehavorialPattern/Observer/AddNewsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newssystem/adapter/AddNewsAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BehavorialPattern/Observer/AddNewsPort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BehavorialPattern/Observer/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newssystem/websocket/ChatClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BehavorialPattern/Observer/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newssystem/websocket/ChatServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BehavorialPattern/Observer/Chef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newssystem/model/Chef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BehavorialPattern/Observer/ChefMockup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newssystem/model/ChefMockup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BehavorialPattern/Observer/News.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newssystem/model/News.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BehavorialPattern/Observer/Newssystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newssystem/model/Newssystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BehavorialPattern/Observer/ObserverDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newssystem/apps/ObserverDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BehavorialPattern/Observer/ParsingInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BehavorialPattern/Observer/PipeProtocolParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newssystem/model/PipeProtocolParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BehavorialPattern/Observer/Receiver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BehavorialPattern/Observer/ReceiverImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newssystem/model/ReceiverImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BehavorialPattern/Observer/RegisterPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newssystem/port/RegisterPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BehavorialPattern/Observer/WebSocketClientDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newssystem/apps/WebSocketClientDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BehavorialPattern/Observer/WebSocketServerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newssystem/apps/WebSocketServerDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pattern.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NewsSystem.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +48,7 @@
   <component name="RunManager" selected="Application.WebSocketServerDemo">
     <configuration name="ChatClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="newssystem.websocket.ChatClient" />
-      <module name="Pattern" />
+      <module name="NewsSystem" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="newssystem.adapter.*" />
@@ -79,7 +61,7 @@
     </configuration>
     <configuration name="ChatServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="newssystem.websocket.ChatServer" />
-      <module name="Pattern" />
+      <module name="NewsSystem" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="newssystem.adapter.*" />
@@ -92,7 +74,7 @@
     </configuration>
     <configuration name="ObserverDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="newssystem.apps.ObserverDemo" />
-      <module name="Pattern" />
+      <module name="NewsSystem" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="newssystem.adapter.*" />
@@ -105,7 +87,7 @@
     </configuration>
     <configuration name="WebSocketClientDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="newssystem.apps.WebSocketClientDemo" />
-      <module name="Pattern" />
+      <module name="NewsSystem" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="newssystem.adapter.*" />
@@ -118,13 +100,60 @@
     </configuration>
     <configuration name="WebSocketServerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="newssystem.apps.WebSocketServerDemo" />
-      <module name="Pattern" />
+      <module name="NewsSystem" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="newssystem.adapter.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="NewsSystem" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="NewsSystem" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
