@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e9d99c72-aa9e-4e37-9188-4da3457d626b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/newssystem/apps/WebSocketServerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newssystem/apps/WebSocketServerDemo.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

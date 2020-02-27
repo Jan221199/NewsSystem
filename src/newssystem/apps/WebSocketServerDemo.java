@@ -40,9 +40,8 @@ public class WebSocketServerDemo {
         registerPort.register(receiverB, "Sport");
         registerPort.register(receiverB, "Politik");
 
-        //newsSystem.newNews("Nachricht: Der FC ... hat gewonnen", "Sport");
-        addNewsPort.newNews(new News("Nachricht: Der FC ... hat gewonnen", "Sport"));
-        addNewsPort.newNews(new News("Nachricht: XYZ ist neuer Bundeskanzler", "Politik"));
+        //addNewsPort.newNews(new News("Nachricht: Der FC ... hat gewonnen", "Sport"));
+        //addNewsPort.newNews(new News("Nachricht: XYZ ist neuer Bundeskanzler", "Politik"));
 
 //        Chef chef = new Chef(newsSystem);
 //        chef.manageNews();
@@ -50,9 +49,9 @@ public class WebSocketServerDemo {
         Thread thread = new Thread(chefMockup);
         thread.start();
 
-        registerPort.unregister(receiverB, "Sport");
-        addNewsPort.newNews(new News("Nachricht: Der FC ... hat gewonnen", "Sport"));
-        addNewsPort.newNews(new News("Nachricht: XYZ ist neuer Bundeskanzler", "Politik"));
+        //registerPort.unregister(receiverB, "Sport");
+        //addNewsPort.newNews(new News("Nachricht: Der FC ... hat gewonnen", "Sport"));
+        //addNewsPort.newNews(new News("Nachricht: XYZ ist neuer Bundeskanzler", "Politik"));
 
 //        chef.manageNews();
 
