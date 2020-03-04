@@ -1,4 +1,13 @@
-package BehavorialPattern.Observer;
+package newssystem.apps;
+
+import newssystem.layer.AbstractionLayer;
+import newssystem.model.Receiver;
+import newssystem.model.ReceiverImpl;
+import newssystem.port.RegisterPort;
+import newssystem.model.Chef;
+import newssystem.model.News;
+import newssystem.model.Newssystem;
+import newssystem.port.AddNewsPort;
 
 public class ObserverDemo {
     public static void main(String[] args) {

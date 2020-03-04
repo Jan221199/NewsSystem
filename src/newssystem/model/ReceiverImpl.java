@@ -1,4 +1,4 @@
-package BehavorialPattern.Observer;
+package newssystem.model;
 
 public class ReceiverImpl implements Receiver {
     public ReceiverImpl(){

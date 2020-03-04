@@ -1,11 +1,9 @@
-package BehavorialPattern.Observer;
+package newssystem.websocket;
 
 import org.java_websocket.client.WebSocketClient;
 import org.java_websocket.handshake.ServerHandshake;
 
-import java.net.InetSocketAddress;
 import java.net.URI;
-import java.net.URISyntaxException;
 
 public class ChatClient extends WebSocketClient {
 

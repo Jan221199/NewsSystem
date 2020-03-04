@@ -1,4 +1,10 @@
-package BehavorialPattern.Observer;
+package newssystem.layer;
+
+import newssystem.model.News;
+import newssystem.model.Newssystem;
+import newssystem.model.Receiver;
+import newssystem.port.AddNewsPort;
+import newssystem.port.RegisterPort;
 
 public class AbstractionLayer implements RegisterPort, AddNewsPort {
     private Newssystem newssystem;

@@ -1,4 +1,6 @@
-package BehavorialPattern.Observer;
+package newssystem.port;
+
+import newssystem.model.Receiver;
 
 public interface RegisterPort {
     public void register(Receiver receiver, String category);

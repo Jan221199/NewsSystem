@@ -1,15 +1,17 @@
-package BehavorialPattern.Observer;
+package newssystem.model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Newssystem {
     private HashMap<String, ArrayList<Receiver>> receivers;
-    private ArrayList<News> allNews;
+    private CopyOnWriteArrayList<News> allNews;
 
     public Newssystem(){
         this.receivers = new HashMap<>();
-        this.allNews = new ArrayList<>();
+        this.allNews = new CopyOnWriteArrayList<>();
     }
 
     public void addCategory(String category){
@@ -45,6 +47,7 @@ public class Newssystem {
         for(Receiver receiver : receivers.get(category)){
             receiver.update(news);
         }
+        removeNews(news);
     }
 
     public void removeNews(News news){
@@ -60,7 +63,7 @@ public class Newssystem {
     }
 
 
-    public ArrayList<News> getAllNews() {
+    public List<News> getAllNews() {
         return allNews;
     }
 
