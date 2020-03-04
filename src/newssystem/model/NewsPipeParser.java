@@ -1,6 +1,6 @@
 package newssystem.model;
 
-public class PipeProtocolParser implements ParsingInterface {
+public class NewsPipeParser implements NewsParsingInterface {
     @Override
     public News parse(String message) {
         final String headline;

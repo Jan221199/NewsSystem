@@ -1,5 +1,6 @@
 package newssystem.apps;
 
+import newssystem.adapter.RegisterAdapter;
 import newssystem.layer.AbstractionLayer;
 import newssystem.adapter.AddNewsAdapter;
 import newssystem.model.*;
@@ -15,12 +16,9 @@ public class WebSocketServerDemo {
         String host = "localhost";
         int port = 8887;
 
-
-
-
         Newssystem newsSystem = new Newssystem();
-        Receiver receiverA = new ReceiverImpl();
-        Receiver receiverB = new ReceiverImpl();
+//        Receiver receiverA = new ReceiverImpl();
+//        Receiver receiverB = new ReceiverImpl();
 
         newsSystem.addCategory("Sport");
         newsSystem.addCategory("Politik");
@@ -30,15 +28,17 @@ public class WebSocketServerDemo {
         RegisterPort registerPort = abstractionLayer;
         AddNewsPort addNewsPort = abstractionLayer;
 
-        ParsingInterface parsingInterface = new PipeProtocolParser();
-        AddNewsAdapter addNewsAdapter = new AddNewsAdapter(addNewsPort, parsingInterface);
+        NewsParsingInterface newsParsingInterface = new NewsPipeParser();
+        AddNewsAdapter addNewsAdapter = new AddNewsAdapter(addNewsPort, newsParsingInterface);
+        RegisterParsingInterface registerParsingInterface = new RegisterPipeParser();
+        RegisterAdapter registerAdapter = new RegisterAdapter(registerPort, registerParsingInterface);
 
         ChatServer chatServer = new ChatServer(addNewsAdapter, new InetSocketAddress(host, port));
         chatServer.start();
 
-        registerPort.register(receiverA, "Sport");
-        registerPort.register(receiverB, "Sport");
-        registerPort.register(receiverB, "Politik");
+//        registerPort.register(receiverA, "Sport");
+//        registerPort.register(receiverB, "Sport");
+//        registerPort.register(receiverB, "Politik");
 
         //addNewsPort.newNews(new News("Nachricht: Der FC ... hat gewonnen", "Sport"));
         //addNewsPort.newNews(new News("Nachricht: XYZ ist neuer Bundeskanzler", "Politik"));

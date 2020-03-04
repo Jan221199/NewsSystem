@@ -1,19 +1,19 @@
 package newssystem.adapter;
 
 import newssystem.port.AddNewsPort;
-import newssystem.model.ParsingInterface;
+import newssystem.model.NewsParsingInterface;
 
 public class AddNewsAdapter {
 
     private AddNewsPort addNewsPort;
-    private ParsingInterface parsingInterface;
+    private NewsParsingInterface newsParsingInterface;
 
-    public AddNewsAdapter(AddNewsPort addNewsPort, ParsingInterface parsingInterface) {
+    public AddNewsAdapter(AddNewsPort addNewsPort, NewsParsingInterface newsParsingInterface) {
         this.addNewsPort = addNewsPort;
-        this.parsingInterface = parsingInterface;
+        this.newsParsingInterface = newsParsingInterface;
     }
 
     public void newNews(String message){
-        addNewsPort.newNews(parsingInterface.parse(message));
+        addNewsPort.newNews(newsParsingInterface.parse(message));
     }
 }

@@ -12,7 +12,7 @@ public class ChatServer extends WebSocketServer {
 
     private AddNewsAdapter addNewsAdapter;
 
-    public  ChatServer(AddNewsAdapter addNewsAdapter, InetSocketAddress address){
+    public ChatServer(AddNewsAdapter addNewsAdapter, InetSocketAddress address){
         super(address);
         this.addNewsAdapter = addNewsAdapter;
     }
