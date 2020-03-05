@@ -1,7 +1,6 @@
 package newssystem.adapter;
 
 import newssystem.model.Receiver;
-import newssystem.model.ReceiverImpl;
 import newssystem.model.RegisterParsingInterface;
 import newssystem.port.RegisterPort;
 
@@ -14,13 +13,15 @@ public class RegisterAdapter{
         this.registerParsingInterface = registerParsingInterface;
     }
 
-    public void register(String message) {
-        registerPort.register(new ReceiverImpl() = registerParsingInterface.parse(message)[0], registerParsingInterface.parse(message)[1]);
+    public void register(Receiver receiver, String message) {
+        String[] strings = registerParsingInterface.parse(message);
+        registerPort.register(receiver, strings[0]);
     }
 
-    public void unregister(Receiver receiver, String category) {
-        registerPort.unregister(receiver, category);
+    public void unregister(Receiver receiver, String message) {
+        String[] strings = registerParsingInterface.parse(message);
+        registerPort.unregister(receiver, strings[0]);
     }
 }
-}
+
 

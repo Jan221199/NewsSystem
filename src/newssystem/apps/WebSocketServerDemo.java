@@ -5,6 +5,7 @@ import newssystem.layer.AbstractionLayer;
 import newssystem.adapter.AddNewsAdapter;
 import newssystem.model.*;
 import newssystem.port.AddNewsPort;
+import newssystem.port.DatenbankPort;
 import newssystem.port.RegisterPort;
 import newssystem.websocket.ChatServer;
 
@@ -16,7 +17,16 @@ public class WebSocketServerDemo {
         String host = "localhost";
         int port = 8887;
 
-        Newssystem newsSystem = new Newssystem();
+        DatenbankPort datenbankPort = new DatenbankMockup();
+        datenbankPort.insertNews(new News("BlaBlaBla0", "Sport"));
+        datenbankPort.insertNews(new News("BlaBlaBla1", "Sport"));
+        datenbankPort.insertNews(new News("BlaBlaBla2", "Sport"));
+        datenbankPort.insertNews(new News("BlaBlaBla3", "Sport"));
+        datenbankPort.insertNews(new News("BlaBlaBla4", "Sport"));
+        datenbankPort.insertNews(new News("BlaBlaBla5", "Sport"));
+        datenbankPort.insertNews(new News("BlaBlaBla6", "Sport"));
+        datenbankPort.insertNews(new News("BlaBlaBla7", "Sport"));
+        Newssystem newsSystem = new Newssystem(datenbankPort);
 //        Receiver receiverA = new ReceiverImpl();
 //        Receiver receiverB = new ReceiverImpl();
 
@@ -33,7 +43,7 @@ public class WebSocketServerDemo {
         RegisterParsingInterface registerParsingInterface = new RegisterPipeParser();
         RegisterAdapter registerAdapter = new RegisterAdapter(registerPort, registerParsingInterface);
 
-        ChatServer chatServer = new ChatServer(addNewsAdapter, new InetSocketAddress(host, port));
+        ChatServer chatServer = new ChatServer(addNewsAdapter, registerAdapter, new InetSocketAddress(host, port));
         chatServer.start();
 
 //        registerPort.register(receiverA, "Sport");

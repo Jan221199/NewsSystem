@@ -15,13 +15,10 @@ public class WebSocketClientDemo {
         chatClient.connect();
         Thread.sleep(1000);
 
-        Receiver receiverA = new ReceiverImpl();
-        Receiver receiverB = new ReceiverImpl();
-        chatClient.send("receiverA|Sport");
-        chatClient.send("receiverB|Sport");
-        chatClient.send("receiverB|Politik");
+        chatClient.send("R|Sport");
 
-        chatClient.send("Die Kansas City Chiefs haben den SuperBowl gewonnen!|Sport");
-        chatClient.send("XYZ ist neuer Bundeskanzler|Politik");
+
+        chatClient.send("N|Die Kansas City Chiefs haben den SuperBowl gewonnen!|Sport");
+        chatClient.send("N|XYZ ist neuer Bundeskanzler|Politik");
     }
 }
