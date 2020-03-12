@@ -27,7 +27,7 @@ public class WebSocketServerDemo {
         datenbankPort.insertNews(new News("BlaBlaBla4", "Sport"));
         datenbankPort.insertNews(new News("BlaBlaBla5", "Sport"));
         datenbankPort.insertNews(new News("BlaBlaBla6", "Sport"));
-        datenbankPort.insertNews(new News("BlaBlaBla7", "Sport"));
+        datenbankPort.insertNews(new News("BlaBlaBla700", "Sport"));
         Newssystem newsSystem = new Newssystem(datenbankPort);
 //        Receiver receiverA = new ReceiverImpl();
 //        Receiver receiverB = new ReceiverImpl();

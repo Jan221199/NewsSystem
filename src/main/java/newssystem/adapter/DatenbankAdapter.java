@@ -38,14 +38,16 @@ public class DatenbankAdapter implements DatenbankPort {
 
     @Override
     public void insertNews(News news) {
-        DBObject document = new BasicDBObject("headline", news.getHeadline())
+        DBObject document = new BasicDBObject("_id", news.getId())
+        .append("headline", news.getHeadline())
         .append("category", news.getCategory());
-        collection.insert(document);
+        WriteResult writeResult = collection.insert(document);
+        System.out.println(writeResult);
     }
 
     @Override
     public void deleteNews(News news) {
-        DBObject document = collection.find(new BasicDBObject("headline", news.getHeadline())).one();
+        DBObject document = collection.find(new BasicDBObject("_id", news.getId())).one();
         if(document != null){
             collection.remove(document);
         }
