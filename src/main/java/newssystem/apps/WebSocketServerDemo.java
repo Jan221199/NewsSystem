@@ -1,5 +1,6 @@
 package newssystem.apps;
 
+import newssystem.adapter.DatenbankAdapter;
 import newssystem.adapter.RegisterAdapter;
 import newssystem.layer.AbstractionLayer;
 import newssystem.adapter.AddNewsAdapter;
@@ -17,7 +18,8 @@ public class WebSocketServerDemo {
         String host = "localhost";
         int port = 8887;
 
-        DatenbankPort datenbankPort = new DatenbankMockup();
+//        DatenbankPort datenbankPort = new DatenbankMockup();
+        DatenbankPort datenbankPort = new DatenbankAdapter();
         datenbankPort.insertNews(new News("BlaBlaBla0", "Sport"));
         datenbankPort.insertNews(new News("BlaBlaBla1", "Sport"));
         datenbankPort.insertNews(new News("BlaBlaBla2", "Sport"));
@@ -29,6 +31,8 @@ public class WebSocketServerDemo {
         Newssystem newsSystem = new Newssystem(datenbankPort);
 //        Receiver receiverA = new ReceiverImpl();
 //        Receiver receiverB = new ReceiverImpl();
+
+        datenbankPort.deleteNews(new News("BlaBlaBla0", "Sport"));
 
         newsSystem.addCategory("Sport");
         newsSystem.addCategory("Politik");
