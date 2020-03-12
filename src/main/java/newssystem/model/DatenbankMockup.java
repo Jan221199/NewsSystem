@@ -8,6 +8,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
+// ------------ID ist nicht implementiert --------------------
+
 public class DatenbankMockup implements DatenbankPort {
 
     private HashMap<String, ArrayList<News>> daten;
