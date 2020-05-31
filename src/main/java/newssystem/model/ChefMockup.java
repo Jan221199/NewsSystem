@@ -1,5 +1,6 @@
 package newssystem.model;
 
+//ChefMockup to publish every News instantly (only for testing)
 public class ChefMockup implements Runnable {
 
     protected Newssystem newsSystem;
@@ -8,7 +9,7 @@ public class ChefMockup implements Runnable {
         this.newsSystem = newsSystem;
     }
 
-
+    //new Thread which does permanently release every incoming News instantly
     @Override
     public void run() {
         while (true){
@@ -19,6 +20,7 @@ public class ChefMockup implements Runnable {
                 }
             }
             try {
+                //...but only every 1000ms
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();

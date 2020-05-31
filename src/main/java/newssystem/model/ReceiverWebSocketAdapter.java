@@ -2,6 +2,7 @@ package newssystem.model;
 
 import org.java_websocket.WebSocket;
 
+//Receiver as Websocket
 public class ReceiverWebSocketAdapter implements Receiver {
     private WebSocket webSocket;
 

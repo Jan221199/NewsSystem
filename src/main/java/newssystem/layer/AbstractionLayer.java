@@ -7,6 +7,7 @@ import newssystem.port.AddNewsPort;
 import newssystem.port.DatenbankPort;
 import newssystem.port.RegisterPort;
 
+//Abstraction Layer
 public class AbstractionLayer implements RegisterPort, AddNewsPort{
     private Newssystem newssystem;
 

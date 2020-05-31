@@ -14,6 +14,7 @@ public class RegisterAdapter{
     }
 
     public void register(Receiver receiver, String message) {
+        //converts String in different categories
         String[] strings = registerParsingInterface.parse(message);
         registerPort.register(receiver, strings[0]);
     }

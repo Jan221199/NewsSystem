@@ -11,10 +11,12 @@ public class ChatClient extends WebSocketClient {
         super(uri);
     }
 
+    //info Message when Client connects
     @Override
     public void onOpen(ServerHandshake serverHandshake) {
         System.out.println("onOpen:: " + serverHandshake);
     }
+
 
     @Override
     public void onMessage(String message) {
@@ -31,11 +33,4 @@ public class ChatClient extends WebSocketClient {
     public void onError(Exception exception) {
         System.out.println("onError:: " + exception.toString());
     }
-
-//    public static void main(String[] args) throws URISyntaxException {
-//        String host = "ws://localhost:8887";
-//
-//        ChatClient chatClient = new ChatClient(new URI(host));
-//        chatClient.connect();
-//    }
 }

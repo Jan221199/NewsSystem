@@ -37,12 +37,16 @@ public class ChatServer extends WebSocketServer {
         webSocket.send("onClose:: Tschüss Client");
     }
 
+
+    //sends a message to the websocket
     @Override
     public void onMessage(WebSocket webSocket, String message) {
-        //webSocket.send("onMessage:: " + message);
+       //webSocket.send("onMessage:: " + message);
        String[] strings = message.split("\\|");
+       //if the identifier is a 'N' it should add a new news to the NewsSystem
         if(strings[0].equals("N")){
-            addNewsAdapter.newNews(String.join("|", Arrays.copyOfRange(strings, 1, strings.length))); // Rest der message übergeben
+            addNewsAdapter.newNews(String.join("|", Arrays.copyOfRange(strings, 1, strings.length))); //rest of message
+        //if the identifier is a 'R' it register a new receiver
         }else if(strings[0].equals("R")){
             Receiver receiver = null;
             if(receivers.containsKey(webSocket) == false) {
@@ -52,6 +56,7 @@ public class ChatServer extends WebSocketServer {
                 receiver = receivers.get(webSocket);
             }
             registerAdapter.register(receiver, String.join("|", Arrays.copyOfRange(strings, 1, strings.length)));
+        //if the identifier is a 'R' it register a new receiver
         }else if(strings[0].equals("U")){
             if(receivers.containsKey(webSocket)) {
                 Receiver receiver = receivers.get(webSocket);
@@ -60,7 +65,7 @@ public class ChatServer extends WebSocketServer {
                 webSocket.send("Noch kein Receiver registriert!");
             }
         }
-        System.out.println("onMessageServer:: " + message);
+        //System.out.println("onMessageServer:: " + message);
 
     }
 
@@ -78,11 +83,4 @@ public class ChatServer extends WebSocketServer {
     public void onStart() {
 
     }
-
-//    public static void main(String[] args) {
-//        String host = "localhost";
-//        int port = 8887;
-//        ChatServer chatServer = new ChatServer(new InetSocketAddress(host, port));
-//        chatServer.run();
-//    }
 }

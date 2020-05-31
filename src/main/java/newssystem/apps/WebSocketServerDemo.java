@@ -18,6 +18,7 @@ public class WebSocketServerDemo {
         String host = "localhost";
         int port = 8887;
 
+        //test News
 //        DatenbankPort datenbankPort = new DatenbankMockup();
         DatenbankPort datenbankPort = new DatenbankAdapter();
         datenbankPort.insertNews(new News("BlaBlaBla0", "Sport"));
@@ -28,46 +29,48 @@ public class WebSocketServerDemo {
         datenbankPort.insertNews(new News("BlaBlaBla5", "Sport"));
         datenbankPort.insertNews(new News("BlaBlaBla6", "Sport"));
         datenbankPort.insertNews(new News("BlaBlaBla700", "Sport"));
+
+
         Newssystem newsSystem = new Newssystem(datenbankPort);
-//        Receiver receiverA = new ReceiverImpl();
-//        Receiver receiverB = new ReceiverImpl();
 
         datenbankPort.deleteNews(new News("BlaBlaBla0", "Sport"));
 
+        //adding Categories
         newsSystem.addCategory("Sport");
         newsSystem.addCategory("Politik");
         newsSystem.addCategory("Wirtschaft");
 
+        //AbstractionLayer with Ports
         AbstractionLayer abstractionLayer = new AbstractionLayer(newsSystem);
         RegisterPort registerPort = abstractionLayer;
         AddNewsPort addNewsPort = abstractionLayer;
 
+        //ParsingInterface for news and registration
         NewsParsingInterface newsParsingInterface = new NewsPipeParser();
         AddNewsAdapter addNewsAdapter = new AddNewsAdapter(addNewsPort, newsParsingInterface);
         RegisterParsingInterface registerParsingInterface = new RegisterPipeParser();
         RegisterAdapter registerAdapter = new RegisterAdapter(registerPort, registerParsingInterface);
 
+        //starting Chatserver
         ChatServer chatServer = new ChatServer(addNewsAdapter, registerAdapter, new InetSocketAddress(host, port));
         chatServer.start();
 
-//        registerPort.register(receiverA, "Sport");
-//        registerPort.register(receiverB, "Sport");
-//        registerPort.register(receiverB, "Politik");
 
         //addNewsPort.newNews(new News("Nachricht: Der FC ... hat gewonnen", "Sport"));
         //addNewsPort.newNews(new News("Nachricht: XYZ ist neuer Bundeskanzler", "Politik"));
 
+        //creating Chef Thread
 //        Chef chef = new Chef(newsSystem);
 //        chef.manageNews();
         ChefMockup chefMockup = new ChefMockup(newsSystem);
         Thread thread = new Thread(chefMockup);
         thread.start();
 
+        //only for tests
         //registerPort.unregister(receiverB, "Sport");
         //addNewsPort.newNews(new News("Nachricht: Der FC ... hat gewonnen", "Sport"));
         //addNewsPort.newNews(new News("Nachricht: XYZ ist neuer Bundeskanzler", "Politik"));
-
-//        chef.manageNews();
+//      chef.manageNews();
 
 
     }

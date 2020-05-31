@@ -22,6 +22,7 @@ public class DatenbankAdapter implements DatenbankPort {
         this.collection = database.getCollection("news");
     }
 
+    //returns last News from a specific category
     @Override
     public List<News> lastMessages(String category, int lastNews) {
         List<News> lastNewsArray = new ArrayList<>();
@@ -36,6 +37,7 @@ public class DatenbankAdapter implements DatenbankPort {
         return newsFromCategory;
     }
 
+    //inserts News to MongoDB
     @Override
     public void insertNews(News news) {
         DBObject document = new BasicDBObject("_id", news.getId())
@@ -45,6 +47,7 @@ public class DatenbankAdapter implements DatenbankPort {
         System.out.println(writeResult);
     }
 
+    //deletes News from MongoDB
     @Override
     public void deleteNews(News news) {
         DBObject document = collection.find(new BasicDBObject("_id", news.getId())).one();
